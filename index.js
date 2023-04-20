@@ -22,7 +22,7 @@ while (checker) {
             i = 3
             break
         }
-        
+
         if (+numberFromUser > randomNumber ) {
             i = i - 1
             alert(`Загаданное число меньше. Попыток осталось: ${i}.`)
@@ -50,7 +50,6 @@ while (checker) {
             checker = false
             alert("Жаль, игра окончена(");
           }
-        i = 3
     }
 }
 
