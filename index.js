@@ -1,41 +1,42 @@
 let checker = true
-alert()
+alert("Сыграем в игру, я загадаю число а тебе, мой друг, надо его угадать. На всё провсё 3 попытки.")
 
 while (checker) {
 
     const randomNumber = Math.floor(Math.random() * 1000);
-
     let i = 3
     console.log(randomNumber)
 
     while (i > 0) {
-        
-        let numberFromUser = prompt("Введи число от 0 до 999")
+
+        let numberFromUser = prompt("Введите число от 0 до 999")
         console.log(i)
 
         if (isNaN(+numberFromUser) || (+numberFromUser < 0 || +numberFromUser > 999) || numberFromUser === "") {
             alert('Некорректный ввод!')
             break
-
-        } else if (+numberFromUser > randomNumber ) {
-            alert('Загаданное число меньше, попробуй еще раз!')
-            numberFromUser = prompt("Введите число от 0 до 999")
-            i = i - 3
-
-        } else if (+numberFromUser < randomNumber ) {
-            alert('Загаданное число больше, попробуй еще раз!')
-            numberFromUser = prompt("Введите число от 0 до 999")
-            i = i - 3
-
-        } else if (+numberFromUser === randomNumber) {
+        } 
+        
+        else if (+numberFromUser > randomNumber ) {
+            alert('Загаданное число меньше')
+            i = i - 1
+        } 
+        
+        else if (+numberFromUser < randomNumber ) {
+            alert('Загаданное число больше')
+            i = i - 1
+        } 
+        
+        if (+numberFromUser === randomNumber) {
             alert('Угадал! Возьми печеньку!')
             i = 3
             break
-        }
+        } 
     }
 
-    if (i === 1) {
+    if (i === 0) {
         alert('Не повезло, в этот раз без печенек!')
+        i = 3
     }
 
     if (i === 3) {
@@ -50,13 +51,7 @@ while (checker) {
             alert("Жаль, игра окончена(");
           }
         i = 3
-
     }
-
-
-
-
-
 }
 
 
