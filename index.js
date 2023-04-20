@@ -18,13 +18,13 @@ while (checker) {
         } 
         
         else if (+numberFromUser > randomNumber ) {
-            alert('Загаданное число меньше')
             i = i - 1
+            alert(`Загаданное число меньше. Попыток осталось: ${i}.`)
         } 
         
         else if (+numberFromUser < randomNumber ) {
-            alert('Загаданное число больше')
             i = i - 1
+            alert(`Загаданное число больше. Попыток осталось: ${i}.`)
         } 
         
         if (+numberFromUser === randomNumber) {
