@@ -15,27 +15,27 @@ while (checker) {
         if (isNaN(+numberFromUser) || (+numberFromUser < 0 || +numberFromUser > 999) || numberFromUser === "") {
             alert('Некорректный ввод!')
             break
-        } 
-        
-        else if (+numberFromUser > randomNumber ) {
-            i = i - 1
-            alert(`Загаданное число меньше. Попыток осталось: ${i}.`)
-        } 
-        
-        else if (+numberFromUser < randomNumber ) {
-            i = i - 1
-            alert(`Загаданное число больше. Попыток осталось: ${i}.`)
-        } 
-        
+        }
+
         if (+numberFromUser === randomNumber) {
             alert('Угадал! Возьми печеньку!')
             i = 3
             break
-        } 
+        }
+        
+        if (+numberFromUser > randomNumber ) {
+            i = i - 1
+            alert(`Загаданное число меньше. Попыток осталось: ${i}.`)
+        }
+        
+        if (+numberFromUser < randomNumber ) {
+            i = i - 1
+            alert(`Загаданное число больше. Попыток осталось: ${i}.`)
+        }
     }
 
     if (i === 0) {
-        alert('Не повезло, в этот раз без печенек!')
+        alert(`Не повезло, в этот раз без печенек! Было загадано ${randomNumber}`)
         i = 3
     }
 
